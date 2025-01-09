@@ -8,7 +8,7 @@ function App() {
   return (
 <>
 <Header/>
-  <main>
+  <main className= 'main-h-[78vh]'>
     <Outlet/>
   </main>
   <Footer/>
