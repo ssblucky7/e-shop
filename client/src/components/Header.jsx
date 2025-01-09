@@ -7,12 +7,12 @@ const Header = () => {
         <div className='container mx-auto items-center h-full'>
 
        {/**logo */}
-         <div>
-            <div>
+         <div className='h-full'>
+            <div className='h-full flex items-center justify-center items-center'>
                 <img
                 src={logo}
-                width={500}
-                height={125}
+                width={170}
+                height={60}
                 alt='logo'
                 />
                   
