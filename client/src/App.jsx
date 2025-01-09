@@ -1,13 +1,17 @@
-
+import{ Outlet} from 'react-router-dom'
 import './App.css'
+import Header from './components/Header'
 
 function App() {
   
 
   return (
-  <main className= 'text-blue-500 text-3x1 font-bold'>
-    Vite App
+<>
+<Header/>
+  <main>
+    <Outlet/>
   </main>
+</>
   )
 }
 
