@@ -1,10 +1,11 @@
-import express from 'express';
+import express, { response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import connectDB from './config/connectDB.js';
+import userRouter from './route/user.route.js';
 
 dotenv.config();
 
@@ -26,9 +27,11 @@ app.use(helmet({
 const PORT = process.env.PORT || 8080;
 
 // Routes
-app.get('/', (req, res) => {
-    res.json({ message: "Hi Bro Server is running "+ PORT });
-});
+app.get('/', (request, response) => {
+    response.json({ message: "Hi Bro Server is running "+ PORT });
+})
+
+app.use('/api/register', userRouter);
 
 connectDB().then(()=>{
     app.listen(PORT, () => {
