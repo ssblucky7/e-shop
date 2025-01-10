@@ -1,4 +1,5 @@
-import { verify } from "jsonwebtoken";
+import pkg from "jsonwebtoken";
+const { verify } = pkg;
 import mongoose from "mongoose";
 
 const usersSchema = new mongoose.Schema({
@@ -24,8 +25,8 @@ const usersSchema = new mongoose.Schema({
         default : null
     },
     refresh_token : {
-        type : Number,
-        default : null
+        type : String,
+        default : ""
     },
     verify_email : {
         type : Boolean,
@@ -37,7 +38,7 @@ const usersSchema = new mongoose.Schema({
     },
     status : {
         type : String,
-        enum: ["Active","Inactive", "Suspended"],
+        enum : ["Active","Inactive", "Suspended"],
         default : "Active"
     },
     address_details : [
@@ -45,6 +46,36 @@ const usersSchema = new mongoose.Schema({
             type : mongoose.Schema.ObjectId,
             ref : 'address'
         }
-    ]
-
+    ],
+    shopping_cart : [
+        {
+            type : mongoose.Schema.ObjectId,
+            ref : 'cartProduct'
+        }
+    ],
+    OrderHistory : [
+        {
+            type : mongoose.Schema.ObjectId,
+            ref : 'order'
+        }
+    ],
+    forgot_password_otp : {
+        type : String,
+        default : null
+    },
+    forgot_password_expiry : {
+        type : Date,
+        default : ""
+    },
+    role : {
+        type : String,
+        enum : ['ADMIN',"USER"],
+        default : "USER"
+    }
+},{
+    timestamps : true
 })
+
+const UserModels = mongoose.model('User',usersSchema)
+
+export default UserModels;
