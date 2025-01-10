@@ -3,8 +3,9 @@ import UserModel from '../models/user.model.js'
 import bcryptjs from 'bcryptjs'
 
 
-export async function registerUserController(request,respons) {
+export async function registerUserController(request,response) {
     try {
+        console.log('Request Body:', request.body)
         const{ name, email, password } = request.body
         if (!name|| !email || !password){
             return response.status(400).json({
@@ -32,16 +33,16 @@ export async function registerUserController(request,respons) {
         const newUser= new UserModel(payload)
         const save= await newUser.save()
 
-        const VerifyEmailUrl = `${process.env.FRONTEND_URL}/verify-email?code=${save?._id}`
+        // const VerifyEmailUrl = `${process.env.FRONTEND_URL}/verify-email?code=${save?._id}`
 
-        const VerifyEmail = await sendEmail({
-            sendTo:email,
-            subject:"Account Verification Email from DurableDress",
-            html:verifyEmailTemplate({
-                name,
-                url : VerifyEmailUrl
-            })
-        })
+        // const VerifyEmail = await sendEmail({
+        //     sendTo:email,
+        //     subject:"Account Verification Email from DurableDress",
+        //     html:verifyEmailTemplate({
+        //         name,
+        //         url : VerifyEmailUrl
+        //     })
+        // })
 
         return response.json({
             message:"User register successfully",

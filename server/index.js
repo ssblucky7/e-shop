@@ -19,9 +19,9 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 app.use(morgan('dev'));
-app.use(helmet({
-    crossOriginEmbedderPolicy: false
-}));
+// app.use(helmet({
+//     crossOriginEmbedderPolicy: false
+// }));
 
 // Define PORT
 const PORT = process.env.PORT || 8080;
@@ -31,7 +31,7 @@ app.get('/', (request, response) => {
     response.json({ message: "Hi Bro Server is running "+ PORT });
 })
 
-app.use('/api/register', userRouter);
+app.use('/user', userRouter);
 
 connectDB().then(()=>{
     app.listen(PORT, () => {
