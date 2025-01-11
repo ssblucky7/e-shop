@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../assets/logo.png'
+import Search from './search'
 
 const Header = () => {
   return (
@@ -26,11 +27,13 @@ const Header = () => {
                 />
                 
             </div>
-        
+            </div>
 
        {/**Search */}
-       <div>
-          search  
+       <div >
+        <div>
+
+        </div>
        </div>
 
 
@@ -39,7 +42,7 @@ const Header = () => {
         Login and my cart
        </div>
        
-       </div>
+      
        </div>
         </header>
   )
