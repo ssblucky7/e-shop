@@ -31,9 +31,7 @@ const Header = () => {
 
        {/**Search */}
        <div >
-        <div>
-
-        </div>
+          <Search/>
        </div>
 
 
