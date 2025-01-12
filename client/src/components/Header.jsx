@@ -1,6 +1,7 @@
-import React from 'react'
-import logo from '../assets/logo.png'
-import search from './search'
+import React from 'react';
+import logo from '../assets/logo.png';
+import Search from './Search';
+
 
 const Header = () => {
   return (
@@ -12,7 +13,7 @@ const Header = () => {
             <div className='h-full flex justify-center items-center'>
                 <img
                 src={logo}
-                width={120}
+                width={170}
                 height={60}
                 alt='logo'
                 className='hidden lg:block'
@@ -30,10 +31,9 @@ const Header = () => {
             </div>
 
        {/**Search */}
-        <div>
-        <search/>
+       <div >
+          <Search/>
        </div>
-       
 
 
        {/**login and my cart  */}
@@ -43,8 +43,8 @@ const Header = () => {
        
       
        </div>
-        </header>
-  )
+    </header>
+  );
 }
 
-export default Header
+export default Header;
