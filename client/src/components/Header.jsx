@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../assets/logo.png'
-import Search from './Search'
+import Search from '../Search'
 
 const Header = () => {
   return (
@@ -31,9 +31,7 @@ const Header = () => {
 
        {/**Search */}
        <div >
-        <div>
-
-        </div>
+          <Search/>
        </div>
 
 
