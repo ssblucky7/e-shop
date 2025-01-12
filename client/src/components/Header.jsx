@@ -12,7 +12,7 @@ const Header = () => {
             <div className='h-full flex justify-center items-center'>
                 <img
                 src={logo}
-                width={170}
+                width={120}
                 height={60}
                 alt='logo'
                 className='hidden lg:block'
@@ -30,9 +30,10 @@ const Header = () => {
             </div>
 
        {/**Search */}
-       <div >
-          <Search/>
+        <div>
+        <Search/>
        </div>
+       
 
 
        {/**login and my cart  */}

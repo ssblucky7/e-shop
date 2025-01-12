@@ -1,11 +1,12 @@
-import React from 'react'
+// import React from 'react'
+// import SearchPage from 'SearchPage'
 
-constSearchPage  = () => {
-  return (
-    <div>
-      SearchPage
-    </div>
-  )
-}
+// const SearchPage  = () => {
+//   return (
+//     <div>
+//       SearchPage
+//     </div>
+//   )
+// }
 
-export default SearchPage
+// export default SearchPage

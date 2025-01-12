@@ -4,6 +4,13 @@ import { TypeAnimation } from 'react-type-animation';
 
 
 const Search = () => {
+
+  // const navigate = useNavigate()
+
+  // const redirectToSearchPage = ()=>{
+  //   navigate("/search")
+ 
+
   return (
    <div className='W-full min-w-[300px] lg:min-w-[420px] h-12 rounded-lg border overflow-hidden flex items-center text-neutral-500 bg-slate-50'>
     <button className='flex justify-center items-center h-full p-3'>
@@ -48,5 +55,6 @@ const Search = () => {
    </div>
   )
 }
+
 
 export default Search
