@@ -4,6 +4,7 @@ import Home from "../pages/home"; // Import the Home component
 import SearchPage from "../pages/SearchPage"; // Import the SearchPage component
 import Login from '../pages/Login'
 import Register from '../pages/Register'
+import ForgotPassword from "../pages/ForgotPassword";
 import OtpVerification from "../pages/OtpVerification";
 
 const router = createBrowserRouter([
