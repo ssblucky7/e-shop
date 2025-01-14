@@ -12,8 +12,10 @@ const Header = () => {
   const [ isMobile ] = useMobile()
   const location = useLocation()
   const isSearchPage = location.pathname === "/search"
-
   const navigate = useNavigate()
+  const user = useSelector((state)=> state?.user)
+
+  console.log('user from store', user)
 
   const redirectToLoginPage = () => {
     navigate("/login")
