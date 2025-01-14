@@ -57,7 +57,7 @@ const Header = () => {
             <div className=''>
               {/* user icons display in only mobile mode. */}
 
-             <button className='text-neutral-600 lg:hidden'>
+             <button className='text-neutral-600 lg:hidden mt-2'>
              <FaRegCircleUser size={26}/>
              </button>
 
