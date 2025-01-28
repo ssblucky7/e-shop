@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { userState } from 'react';
 import logo from '../assets/logo.png';
 import Search from './Search';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -6,9 +6,7 @@ import { FaRegCircleUser } from "react-icons/fa6";
 import useMobile from '../hooks/useMobile';
 import { BsCart4 } from "react-icons/bs";
 import { useSelector } from 'react-redux';
-
-
-
+import { GoTriangleDown, GoTriangleUp } from "react-icons/go";
 
 const Header = () => {
   const [ isMobile ] = useMobile()
@@ -16,6 +14,7 @@ const Header = () => {
   const isSearchPage = location.pathname === "/search"
   const navigate = useNavigate()
   const user = useSelector((state)=> state?.user)
+  const [openUserMenu,setOpenUserMenu] = userState(false)
 
   console.log('user from store', user)
 
@@ -67,7 +66,28 @@ const Header = () => {
 
              {/**login and my cart in desktop mode */}
             <div className='hidden lg:flex items-center gap-10'>
-              <button onClick={redirectToLoginPage} className='text-lg px-2'>Login</button>
+            
+            {
+               user?._id ? (
+                <div className= 'relative'>
+                  <div className='flex items-cener gap-2'>
+                    <p>Account</p>
+                    <GoTriangleDown/>
+                    {/*< GoTriangleUp/>*/}
+                  </div>
+                  <div className = 'absolute right-0 top-12'>
+                      <div className= 'bg-purple-400 rounded p-4 min-w-52 lg: shadow-lg'>
+                        <UserMenu/>
+
+                      </div>
+                      
+                    </div>
+                </div>
+               ) : (
+                <button onClick={redirectToLoginPage} className='text-lg px-2'>Login</button>
+               )
+            }
+              
               <button className='flex items-center gap-2 bg-green-800 hover:bg-green-700 px-3 py-3 rounded text-white'>
                 {/* add to cart icon */}
                 <div className='animate-bounce'>
