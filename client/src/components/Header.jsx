@@ -21,7 +21,11 @@ const Header = () => {
 
   const redirectToLoginPage = () => {
     navigate("/login");
-  };
+  }
+
+  const handelCloseUserMenu = () => {
+    setOpenUserMenu(false)
+  }
 
   return (
     <header className='h-24 lg:h-20 lg:shadow-md sticky top-0 flex flex-col justify-center gap-1 bg-white'>
@@ -82,7 +86,7 @@ const Header = () => {
                     openUserMenu && (
                       <div className = 'absolute right-0 top-12'>
                       <div className= 'bg-white-400 rounded p-4 min-w-52 lg: shadow-lg'>
-                        <UserMenu/>
+                        <UserMenu close={setOpenUserMenu}/>
 
                       </div>
                       
