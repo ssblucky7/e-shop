@@ -6,13 +6,12 @@ import Axios from '../utils/Axios'
 import SummaryApi from '../common/SummaryApi'
 import {logout} from '../store/userSlice'
 import toast from 'react-hot-toast'
-//import { useDispatch } from 'react-redux'
 import AxiosToastError from '../utils/AxiosToastError'
 
 
 
 const UserMenu = () => {
-    const user = userSelector((state)=> state.user)
+    const user = useSelector((state)=> state.user)
     const dispatch = useDispatch()
 
     const handleLogout = async()=>{

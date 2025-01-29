@@ -56,7 +56,7 @@ const Header = () => {
           {/** Login and My Cart */}
           <div className=''>
             {/* User icon (only in mobile mode) */}
-            <button className='text-neutral-600 lg:hidden mt-2'>
+            <button className='text-yellow-300 lg:hidden mt-2'>
               <FaRegCircleUser size={26} />
             </button>
 
@@ -81,7 +81,7 @@ const Header = () => {
                   {
                     openUserMenu && (
                       <div className = 'absolute right-0 top-12'>
-                      <div className= 'bg-purple-400 rounded p-4 min-w-52 lg: shadow-lg'>
+                      <div className= 'bg-white-400 rounded p-4 min-w-52 lg: shadow-lg'>
                         <UserMenu/>
 
                       </div>
