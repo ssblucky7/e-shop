@@ -21,6 +21,7 @@ const UserMenu = ({close}) => {
      
 
       if (response.data.success) {
+        close()
         dispatch(logout());
         localStorage.clear()
         toast.success(response.data.message)

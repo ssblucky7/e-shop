@@ -27,6 +27,15 @@ const Header = () => {
     setOpenUserMenu(false)
   }
 
+  const handleMobileUser = () => {
+    if(!user._id){
+      navigate("/login")
+      return
+    }
+
+    navigate("/user")
+  }
+
   return (
     <header className='h-24 lg:h-20 lg:shadow-md sticky top-0 flex flex-col justify-center gap-1 bg-white'>
       {!(isSearchPage && isMobile) && (
@@ -60,8 +69,8 @@ const Header = () => {
           {/** Login and My Cart */}
           <div className=''>
             {/* User icon (only in mobile mode) */}
-            <button className='text-yellow-300 lg:hidden mt-2'>
-              <FaRegCircleUser size={26} />
+            <button className='text-yellow-300 lg:hidden' onClick={handleMobileUser}>
+              <FaRegCircleUser size={26}/>
             </button>
 
             {/** Login and My Cart (Desktop mode) */}

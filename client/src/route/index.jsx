@@ -40,6 +40,10 @@ const router = createBrowserRouter([
             {
                 path : "reset-password",
                 element : <ResetPassword/>
+            },
+            {
+                path : "user",
+                element : <UserMenuMobile/>
             }
        ]
     }
