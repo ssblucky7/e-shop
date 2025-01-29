@@ -8,27 +8,28 @@ import { logout } from '../store/userSlice';
 import toast from 'react-hot-toast';
 import AxiosToastError from '../utils/AxiosToastError';
 
-const UserMenu = React.memo(() => {
-  const user = useSelector((state) => state.user?.name || state.user?.mobile);
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+const UserMenu = ({close}) => {
+  const user = useSelector((state) => state.user)
+  const dispatch = useDispatch()
+  
 
-  const handleLogout = useCallback(async () => {
+  const handleLogout = (async () => {
     try {
-      const response = await Axios({ ...SummaryApi.logout });
-      console.log('logout', response);
+      const response = await Axios({ 
+        ...SummaryApi.logout
+       })
+     
 
       if (response.data.success) {
         dispatch(logout());
-        localStorage.removeItem('userToken'); // Remove only necessary items
-        toast.success(response.data.message);
-        navigate('/');
+        localStorage.clear()
+        toast.success(response.data.message)
+       
       }
     } catch (error) {
-      console.log(error);
       AxiosToastError(error);
     }
-  }, [dispatch, navigate]);
+  };
 
   return (
     <div>
