@@ -62,7 +62,6 @@ const Header = () => {
 
             {/** Login and My Cart (Desktop mode) */}
             <div className='hidden lg:flex items-center gap-10'>
-<<<<<<< HEAD
             
             {
                user?._id ? (
@@ -91,21 +90,6 @@ const Header = () => {
                     )
                   }
                 
-=======
-
-              {user?._id ? (
-                <div className='relative'>
-                  <div className='flex items-center gap-2'>
-                    <p>Account</p>
-                    <GoTriangleDown />
-                    {/*< GoTriangleUp/>*/}
-                  </div>
-                  <div className='absolute right-0 top-12'>
-                    <div className='bg-purple-400 rounded p-4 min-w-52 lg:shadow-lg'>
-                      <UserMenu />
-                    </div>
-                  </div>
->>>>>>> a263a45a736dbd8bdef3866433dc380413f4d9d9
                 </div>
               ) : (
                 <button onClick={redirectToLoginPage} className='text-lg px-2'>Login</button>

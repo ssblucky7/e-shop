@@ -34,6 +34,7 @@ const userSlice = createSlice({
             state.role = action.payload?.role
 
 
+            },
         },
         logout : (state,action)=>{
             state._id = ""
@@ -48,7 +49,7 @@ const userSlice = createSlice({
             state.shopping_cart = []
             state.orderHistory = []
             state.role = ""
-    }
+    },
 
 }
 )
