@@ -32,7 +32,7 @@ const SummaryApi = {
     method : "get"
   },
   logout : {
-    url: "/api/user/logout",
+    url: '/api/user/logout',
     method : 'get'
   }
 }
