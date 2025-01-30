@@ -23,13 +23,7 @@ const UserMenu = ({close}) => {
      
 
       if (response.data.success) {
-<<<<<<< HEAD
-        if(close){
-          close()
-        }
-=======
         close()
->>>>>>> d4f4dabdacf81408decd82bf97c2a5325d8e5595
         dispatch(logout());
         localStorage.clear()
         toast.success(response.data.message)
