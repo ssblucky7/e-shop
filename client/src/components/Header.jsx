@@ -30,14 +30,8 @@ const Header = () => {
   const handleMobileUser = () => {
     if(!user._id){
       navigate("/login")
-<<<<<<< HEAD
     return
     }
-=======
-      return
-    }
-
->>>>>>> d4f4dabdacf81408decd82bf97c2a5325d8e5595
     navigate("/user")
   }
 
@@ -74,13 +68,8 @@ const Header = () => {
           {/** Login and My Cart */}
           <div className=''>
             {/* User icon (only in mobile mode) */}
-<<<<<<< HEAD
-            <button className='text-yellow-300 lg:hidden' mt-2 onClick={handleMobileUser}>
-              <FaRegCircleUser size={26} />
-=======
             <button className='text-yellow-300 lg:hidden' onClick={handleMobileUser}>
               <FaRegCircleUser size={26}/>
->>>>>>> d4f4dabdacf81408decd82bf97c2a5325d8e5595
             </button>
 
             {/** Login and My Cart (Desktop mode) */}
