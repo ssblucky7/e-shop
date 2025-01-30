@@ -1,11 +1,13 @@
 import React from 'react'
 
-const MyOrder = () => {
+const MyOrders = () => {
   return (
     <div>
-      MyOrder
+      MyOrders
     </div>
   )
 }
 
-export default MyOrder
+export default MyOrders
+
+

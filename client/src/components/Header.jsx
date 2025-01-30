@@ -17,7 +17,7 @@ const Header = () => {
   const user = useSelector((state) => state?.user);
   const [openUserMenu, setOpenUserMenu] = useState(false); // Fixed useState typo
 
-  console.log('user from store', user);
+
 
   const redirectToLoginPage = () => {
     navigate("/login")

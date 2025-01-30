@@ -24,7 +24,7 @@ const Search = () => {
     navigate("/search")
   }
 
-  console.log("search", isSearchPage)
+
 
   
   return (
