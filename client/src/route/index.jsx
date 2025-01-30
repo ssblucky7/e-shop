@@ -45,6 +45,27 @@ const router = createBrowserRouter([
             {
                 path : "user",
                 element : <UserMenuMobile/>
+<<<<<<< HEAD
+=======
+            },
+            {
+                path : "dashboard",
+                element : <Dashboard/>,
+                children : [
+                    {
+                        path : "profile",
+                        element : <Profile/>
+                    },
+                    {
+                        path : "address",
+                        element : <Address/>
+                    },
+                    {
+                        path : "myorders",
+                        element : <MyOrders/>
+                    }
+                ]
+>>>>>>> d4f4dabdacf81408decd82bf97c2a5325d8e5595
             }
        ]
     }
