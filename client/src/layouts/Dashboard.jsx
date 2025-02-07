@@ -15,6 +15,7 @@ const Dashboard = () => {
           <div className='bg-white min-h-[75vh]'>
             <Outlet/>
           </div>
+
       </div>
     </section>
   )

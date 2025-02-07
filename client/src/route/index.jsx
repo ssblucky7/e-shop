@@ -14,9 +14,14 @@ import MyOrders from "../pages/MyOrders";
 import Address from "../pages/Address";
 import CategoryPage from "../pages/CategoryPage";
 import SubCategoryPage from "../pages/SubCategoryPage";
+<<<<<<< HEAD
 import UploadProduct from "../pages/UploadProduct";
 import ProductAdmin from "../pages/ProductAdmin";
 
+=======
+import UploadProductPage from "../pages/UploadProductPage";
+import ProductAdmin from "../pages/ProductAdmin";
+>>>>>>> c10272d34444f5193531ec5a56c631a01c261c2e
 
 
 const router = createBrowserRouter([
@@ -75,6 +80,7 @@ const router = createBrowserRouter([
                     {
                         path : "category",
                         element : <CategoryPage/>
+<<<<<<< HEAD
 
                     },
                     {
@@ -84,11 +90,28 @@ const router = createBrowserRouter([
                     {
                         path : "upload-product",
                         element : <UploadProduct/>
+=======
+                    },
+                    {
+                        path : "sub-category",
+                        element : <SubCategoryPage/>
+                    },
+                    
+                    {
+                        path : "upload-product",
+                        element : <UploadProductPage/>
+>>>>>>> c10272d34444f5193531ec5a56c631a01c261c2e
                     },
                     {
                         path : "product",
                         element : <ProductAdmin/>
+<<<<<<< HEAD
                     }
+=======
+                    },
+
+                    
+>>>>>>> c10272d34444f5193531ec5a56c631a01c261c2e
                 ]
             }
        ]
