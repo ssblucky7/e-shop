@@ -52,11 +52,7 @@ const UserMenu = ({close}) => {
 
       <Divider/>
       <div className = 'text-sm grid gap-1'>
-
-       <Link onClick={handleClose}  to={"/dashboard/upload-product"} className='px-2 
-        hover:bg-orange-200 py-1'>Upload Product</Link>
         
-<<<<<<< HEAD
       <Link onClick={handleClose}  to={"/dashboard/category"} className='px-2 
         hover:bg-orange-200 py-1'>Category</Link>
 
@@ -70,17 +66,6 @@ const UserMenu = ({close}) => {
        <Link onClick={handleClose}  to={"/dashboard/product"} className='px-2 
         hover:bg-orange-200 py-1'>Product</Link>
         
-=======
-        <Link onClick={handleClose}  to={"/dashboard/category"} className='px-2 
-        hover:bg-orange-200 py-1'>Category</Link>
-
-        <Link onClick={handleClose}  to={"/dashboard/sub-category"} className='px-2 
-        hover:bg-orange-200 py-1'>Sub Category</Link>
-
-        <Link onClick={handleClose}  to={"/dashboard/product"} className='px-2 
-        hover:bg-orange-200 py-1'>Product</Link>
-
->>>>>>> c10272d34444f5193531ec5a56c631a01c261c2e
         <Link onClick={handleClose}  to={"/dashboard/myorders"} className='px-2 
         hover:bg-orange-200 py-1'>My Orders</Link>
 
